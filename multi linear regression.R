@@ -3,7 +3,7 @@ datas = read.csv(a)
 # View(datas)
 plot(datas, main='pair wise scatter plot')
 
-l=lm(Price~.,data=datas);
+l=lm(Price~.,data=datas);# change Price to the name of your dependant coloumn name
 round(cor(datas),3)
 
 datac = datas
@@ -18,7 +18,7 @@ repeat{
     break
   } else{
     datac=datac[,-z]
-    a=lm(Price~.,data=datac)
+    a=lm(Price~.,data=datac)# change Price to the name of your dependant coloumn name
 
   }
 
