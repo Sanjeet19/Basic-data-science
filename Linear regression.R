@@ -18,7 +18,6 @@ abline(h=-2)
 abline(h=2)
 
 
-datas = datas
 l1 = l
 repeat{
   identify(l1$fitted.values,rstandard(l1),main='residual analysis', xlab='predicted price values', ylab='standardized residuals')
@@ -28,7 +27,7 @@ repeat{
     break
   } else{
     datas = datas[-z,]
-    l1 = lm(datas$BidPrice~datas$CouponRate)
+    l1 = lm(datas[,2]~datas[,1])
     
     plot(l1$fitted.values,rstandard(l1),main='residual analysis', xlab='predicted price values', ylab='standardized residuals')
     abline(h=2,lty=2)
