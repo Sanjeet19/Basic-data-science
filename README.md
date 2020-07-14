@@ -1,2 +1,2 @@
 # Basic-data-science
-Code in R
+Codes for simple machine learning concepts of regression and clustering
